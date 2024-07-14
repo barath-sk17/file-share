@@ -133,6 +133,84 @@ This project includes:
 9. Verify documents from the verifier account.
 10. Add documents from the requester account.
 
+## Smart Contracts Overview
+
+### Accounts.sol
+
+The `Accounts.sol` contract manages user accounts, including verifiers and requesters. It allows users to register with their details and ensures email validity using the `EmailRegex.sol` library.
+
+- **Key Features:**
+  - Register user accounts with details such as name, email, logo, and description.
+  - Validate email addresses using a regular expression.
+  - Manage and store account types (verifier/requester) and their verification prices.
+  - Maintain a list of verifiers and retrieve their details.
+  - Self-destruct function to terminate the contract.
+
+### Documents.sol
+
+The `Documents.sol` contract handles the submission and verification of documents. It integrates with the `Accounts.sol` contract to verify document requests and ensure appropriate payments.
+
+- **Key Features:**
+  - Add documents with details such as name, description, and document address.
+  - Ensure document addresses are unique.
+  - Handle payments and refunds for document verification.
+  - Retrieve document details and their status.
+  - Verify and update document status (Pending, Verified, Rejected).
+  - Maintain counts of verified, rejected, and total documents for each user.
+  - Self-destruct function to terminate the contract.
+
+### EmailRegex.sol
+
+The `EmailRegex.sol` library provides a state machine-based approach to validate email addresses. It defines a series of states and transitions to check the validity of email strings.
+
+- **Key Features:**
+  - State machine implementation for email validation.
+  - Function to check if an email string matches the regex.
+
+### StringUtils.sol
+
+The `StringUtils.sol` library offers utility functions for string comparisons.
+
+- **Key Features:**
+  - Compare two strings lexicographically.
+  - Check equality of two strings.
+
+### Migrations.sol
+
+The `Migrations.sol` contract helps manage the deployment of other contracts. It tracks the last completed migration and supports upgrading to new contract addresses.
+
+- **Key Features:**
+  - Track the last completed migration step.
+  - Upgrade to a new migration contract address.
+
+### SimpleStorage.sol
+
+The `SimpleStorage.sol` contract is a basic example of a storage contract.
+
+- **Key Features:**
+  - Store and retrieve a single unsigned integer value.
+
+### Integration and Deployment
+
+The smart contracts are designed to work together seamlessly, enabling a robust verification system on the blockchain. Follow the standard procedures for compiling, deploying, and interacting with these contracts using tools like Truffle or Hardhat.
+
+### Usage
+
+1. **Compile and Deploy Contracts:**
+   - Use a development framework like Truffle to compile and deploy the contracts to your preferred blockchain network.
+
+2. **Register Accounts:**
+   - Users can register as verifiers or requesters by calling the `register` function in the `Accounts.sol` contract.
+
+3. **Add Documents:**
+   - Requesters can add documents for verification by calling the `addDocument` function in the `Documents.sol` contract.
+
+4. **Verify Documents:**
+   - Verifiers can verify or reject documents by calling the `verifyDocument` function in the `Documents.sol` contract.
+
+5. **Retrieve Information:**
+   - Use the provided functions to retrieve account and document details, as well as counts of verified and rejected documents.
+
 ## Unit Test Coverage
 **TestSimpleStorage**
 - `✓ testItStoresAValue (66ms)`
