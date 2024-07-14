@@ -1,7 +1,13 @@
-# Document Exchange/Verification System on Ethereum Blockchain using IPFS
+### Document Exchange/Verification System on Ethereum Blockchain using IPFS
 
-## Overview
+#### Overview
 In response to the challenges of verifying and managing digital documents securely, I developed a blockchain-based document exchange and verification system using Ethereum and IPFS. This system caters to companies, universities, and firms, providing a secure and efficient method to share and verify documents. Key benefits include cost reduction, risk mitigation, and enhanced productivity through the digitization of organizational processes while maintaining high trust levels and complying with security regulations.
+
+This project includes:
+
+- **Functional Prototype**: A working prototype of the blockchain-based eVault system, featuring document upload, retrieval, sharing, and tracking.
+- **Technical Documentation**: Comprehensive documentation detailing the system’s architecture, smart contract logic, and security measures.
+- **User Manual**: Instructions for stakeholders on how to use the eVault system.
 
 ## Prerequisites
 - **Node**: v8.11.4 or v14
