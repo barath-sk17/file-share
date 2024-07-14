@@ -4,7 +4,7 @@
 In response to the challenges of verifying and managing digital documents securely, I developed a blockchain-based document exchange and verification system using Ethereum and IPFS. This system caters to companies, universities, and firms, providing a secure and efficient method to share and verify documents. Key benefits include cost reduction, risk mitigation, and enhanced productivity through the digitization of organizational processes while maintaining high trust levels and complying with security regulations.
 
 ## Prerequisites
-- **Node**: v8.11.4 OR V14
+- **Node**: v8.11.4 or v14
 - **npm**: 5.6.0
 - **Truffle**: v4.1.14 (core: 4.1.14)
 - **Solidity**: v0.4.24 (solc-js)
