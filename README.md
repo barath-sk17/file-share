@@ -174,5 +174,3 @@ The smart contracts are designed to work together seamlessly, enabling a robust 
 
 **9 passing (3s)**
 
-## Contact
-For more inquiries and conversations, feel free to contact me at [barath-sk17@github.com](mailto:barath-sk17@github.com).
